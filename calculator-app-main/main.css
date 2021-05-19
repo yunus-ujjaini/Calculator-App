@@ -1,0 +1,278 @@
+:root {
+  --main-bg:#160628;
+  --keypad-bg:#1d0934;
+  --screen-bg:#1d0934;
+  --text-color:#ffe53d;
+  --toggle-red:#00e0d1;
+  --seleted-theme:flex-end;
+  --keybg:#341c4f;
+  --keytextcolor:#ffe53d;
+  --keybgshadow:#871c9c;
+  --redkeybg:#00e0d1;
+  --redkeybgshadow:#6cf9f2;
+  --redkeytext:#000000;
+  --bluekeybg: #58077d;
+  --bluekeyshadow:#bc15f4;
+  --bluekeytext:#000000;
+}
+
+html {
+  font-size: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+body {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-size: 32px;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.calc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.calc {
+  width: 90vw;
+}
+
+.header {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.theme {
+  font-size: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.t-content {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.t-selected {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--text-color);
+}
+
+.t-select {
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--keypad-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: var(--seleted-theme);
+      -ms-flex-pack: var(--seleted-theme);
+          justify-content: var(--seleted-theme);
+}
+
+.t-selected:hover {
+  cursor: pointer;
+}
+
+.t-select:hover {
+  cursor: pointer;
+}
+
+.t-selected-circle {
+  height: 14px;
+  width: 14px;
+  background-color: var(--toggle-red);
+  border-radius: 50%;
+  margin: 0px 2px;
+}
+
+.screen {
+  margin: 20px 0px;
+  width: inherit;
+  max-width: inherit;
+  height: 100px;
+  background-color: var(--screen-bg);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen .screen-content {
+  margin: 10px;
+  font-size: 1.2rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.screen .screen-content::-webkit-scrollbar {
+  display: none;
+}
+
+.keypad {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: inherit;
+  background-color: var(--keypad-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.key {
+  width: 20%;
+  height: 50px;
+  background-color: var(--keybg);
+  color: var(--keytextcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 0px 0px var(--keybgshadow);
+          box-shadow: 0px 2px 0px 0px var(--keybgshadow);
+  margin: 10px 4px;
+  font-size: 0.75rem;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.key:hover {
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px 0px var(--keybgshadow);
+          box-shadow: 0px 0px 0px 0px var(--keybgshadow);
+}
+
+.key-2 {
+  width: 46%;
+  height: 50px;
+  background-color: var(--keybg);
+  color: var(--keytextcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 0px 0px var(--keybgshadow);
+          box-shadow: 0px 2px 0px 0px var(--keybgshadow);
+  margin: 10px 4px;
+  font-size: 0.75rem;
+}
+
+.key-2:hover {
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px 0px var(--keybgshadow);
+          box-shadow: 0px 0px 0px 0px var(--keybgshadow);
+}
+
+.key-red {
+  background-color: var(--redkeybg);
+  color: var(--redkeytext);
+  -webkit-box-shadow: 0px 2px 0px 0px var(--redkeybgshadow);
+          box-shadow: 0px 2px 0px 0px var(--redkeybgshadow);
+}
+
+.key-blue {
+  background-color: var(--bluekeybg);
+  color: var(--bluekeytext);
+  -webkit-box-shadow: 0px 2px 0px 0px var(--bluekeyshadow);
+          box-shadow: 0px 2px 0px 0px var(--bluekeyshadow);
+  font-size: 0.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 5px;
+  font-size: 0.2rem;
+}
+
+.footer a {
+  color: var(--text-color);
+}
+
+@media only screen and (min-device-width: 700px) {
+  .calc {
+    width: 500px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

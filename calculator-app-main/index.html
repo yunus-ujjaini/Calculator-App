@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Calculator app</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="calc-container">
+    <div class="calc">
+      <div class="header">
+        <div class="brand">calc</div>
+        <div class="theme">
+          <div class="t-text">
+            THEME
+          </div>
+          <div class="t-content">
+            <div class="t-selected">
+              <div class="t1" onclick="changeThemeTo(1)">1</div>
+              <div class="t2" onclick="changeThemeTo(2)">2</div>
+              <div class="t3" onclick="changeThemeTo(3)">3</div>
+            </div>
+            <div class="t-select" onclick="changeThemeTo(0)">
+              <div class="t-selected-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="screen-content" id="screen">0</div>
+      </div>
+      <div class="keypad">
+        <div class="key" onclick="type(7)">7</div>
+        <div class="key" onclick="type(8)">8</div>
+        <div class="key" onclick="type(9)">9</div>
+        <div class="key key-blue" onclick="del()">DEL</div>
+        <div class="key" onclick="type(4)">4</div>
+        <div class="key" onclick="type(5)">5</div>
+        <div class="key" onclick="type(6)">6</div>
+        <div class="key " onclick="perform('+')">+</div>
+        <div class="key" onclick="type(1)">1</div>
+        <div class="key" onclick="type(2)">2</div>
+        <div class="key" onclick="type(3)">3</div>
+        <div class="key " onclick="perform('-')">-</div>
+        <div class="key" onclick="type('.')">.</div>
+        <div class="key" onclick="type(0)">0</div>
+        <div class="key" onclick="perform('/')">/</div>
+        <div class="key " onclick="perform('x')">x</div>
+        <div class="key-2 key-blue" onclick="reset()">RESET</div>
+        <div class="key-2 key-red" onclick="showans()">=</div>
+      </div>
+    </div>
+    <span class="footer">Designed by <a href='https://yunus-ujjaini-portfolio.netlify.app/'>Yunus Ujjaini</a></span>
+  </div>
+  
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yunus Ujjaini</a>.
+  </div> -->
+
+  <script src="index.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
